@@ -17,8 +17,8 @@ export const THEME_PRESET_OPTIONS = [
     label: t("Default"),
     value: "default",
     primary: {
-      light: "oklch(0.205 0 0)",
-      dark: "oklch(0.922 0 0)",
+      light: "oklch(0.52 0.12 215)",
+      dark: "oklch(0.85 0.14 200)",
     },
   },
   {
@@ -35,14 +35,6 @@ export const THEME_PRESET_OPTIONS = [
     primary: {
       light: "#00685f",
       dark: "#54eccd",
-    },
-  },
-  {
-    label: "Soft Pop",
-    value: "soft-pop",
-    primary: {
-      light: "oklch(0.5106 0.2301 276.9656)",
-      dark: "oklch(0.6801 0.1583 276.9349)",
     },
   },
   {

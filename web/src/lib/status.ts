@@ -13,7 +13,7 @@ export const toneClasses: Record<Tone, string> = {
   red: "bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/20",
   // rose is used for "Critical" — a solid high-emphasis fill clearly above the soft red outline of "High".
   rose: "bg-rose-600 text-white border-rose-600 dark:bg-rose-600 dark:text-white",
-  violet: "bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/20",
+  violet: "bg-teal-500/15 text-teal-600 dark:text-teal-400 border-teal-500/20",
   slate: "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/20",
 };
 
@@ -24,7 +24,7 @@ export const toneDot: Record<Tone, string> = {
   amber: "bg-amber-500",
   red: "bg-red-500",
   rose: "bg-white",
-  violet: "bg-violet-500",
+  violet: "bg-teal-500",
   slate: "bg-slate-500",
 };
 

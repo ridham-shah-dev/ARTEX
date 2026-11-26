@@ -102,7 +102,7 @@ function JudgeSparkbars({ daily }: { daily: JudgeDayUsage[] }) {
           <div
             key={d.date}
             title={t("{date} · {calls} calls · {tokens} tokens", { date: d.date, calls: d.calls, tokens: fmtTokens(total) })}
-            className="min-w-[2px] flex-1 rounded-sm bg-violet-500/60 hover:bg-violet-500"
+            className="min-w-[2px] flex-1 rounded-sm bg-teal-500/60 hover:bg-teal-500"
             style={{ height: `${h}%` }}
           />
         );
@@ -304,11 +304,11 @@ function JudgeCard() {
       {/* Enable switch — standalone highlighted bar */}
       <div
         className={`flex items-center justify-between gap-3 rounded-lg border px-4 py-3 ${
-          cfg.enabled ? "border-violet-400/50 bg-violet-50/40 dark:bg-violet-950/20" : "bg-muted/40"
+          cfg.enabled ? "border-teal-400/50 bg-teal-50/40 dark:bg-teal-950/20" : "bg-muted/40"
         }`}
       >
         <div className="flex items-center gap-2.5">
-          <BotIcon className={`h-5 w-5 shrink-0 ${cfg.enabled ? "text-violet-600" : "text-muted-foreground"}`} />
+          <BotIcon className={`h-5 w-5 shrink-0 ${cfg.enabled ? "text-teal-600" : "text-muted-foreground"}`} />
           <div>
             <p className="text-sm font-semibold leading-tight">{t("Model fallback approval")}</p>
             <p className="text-xs text-muted-foreground mt-0.5">

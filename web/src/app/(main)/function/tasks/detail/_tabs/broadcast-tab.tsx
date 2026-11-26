@@ -83,8 +83,8 @@ const KIND_META: Record<string, KindMeta> = {
   hint: {
     label: t("Hint"),
     icon: LightbulbIcon,
-    dot: "bg-violet-500",
-    chip: "bg-violet-500/15 text-violet-600 dark:text-violet-400",
+    dot: "bg-teal-500",
+    chip: "bg-teal-500/15 text-teal-600 dark:text-teal-400",
   },
   digest: {
     label: t("Digest"),

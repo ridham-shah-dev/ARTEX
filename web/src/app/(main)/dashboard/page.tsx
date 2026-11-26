@@ -83,8 +83,8 @@ const ASSET_TYPE_LABELS: Record<string, string> = {
 
 const ASSET_COLORS: Record<string, string> = {
   root_domain: "bg-blue-500",
-  ip: "bg-indigo-400",
-  subdomain: "bg-violet-500",
+  ip: "bg-blue-400",
+  subdomain: "bg-teal-500",
   app: "bg-orange-400",
   service: "bg-cyan-500",
   endpoint: "bg-emerald-500",
@@ -484,13 +484,13 @@ export default function DashboardPage() {
   }
 
   function workerColor(w: string): string {
-    if (w === "planner") return "text-violet-400";
+    if (w === "planner") return "text-teal-400";
     if (w === "mainagent") return "text-cyan-400";
     return "text-blue-400";
   }
 
   function workerBg(w: string): string {
-    if (w === "planner") return "bg-violet-500/10 text-violet-400 border-violet-500/20";
+    if (w === "planner") return "bg-teal-500/10 text-teal-400 border-teal-500/20";
     if (w === "mainagent") return "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
     return "bg-blue-500/10 text-blue-400 border-blue-500/20";
   }
@@ -733,7 +733,7 @@ export default function DashboardPage() {
                     label: t("Output"),
                     value: displayedTokens.output,
                     barColor: dailyTrendConfig.output.color!,
-                    text: "text-violet-400",
+                    text: "text-teal-400",
                   },
                 ].map(({ label, value, barColor, text }) => {
                   const pct = total > 0 ? (value / total) * 100 : 0;
@@ -1178,7 +1178,7 @@ export default function DashboardPage() {
                   className={cn(
                     "text-[10px]",
                     settings?.traffic_capture
-                      ? "border-violet-500/30 bg-violet-500/10 text-violet-400"
+                      ? "border-teal-500/30 bg-teal-500/10 text-teal-400"
                       : "border-amber-500/30 bg-amber-500/10 text-amber-500",
                   )}
                 >

@@ -191,7 +191,7 @@ function statusIcon(status: SessionStatus) {
     case "blocked": // error
       return <CircleXIcon className="size-3.5 text-red-500" />;
     case "exhausted": // steps exhausted (hit max_turns)
-      return <ZapOffIcon className="size-3.5 text-violet-500" />;
+      return <ZapOffIcon className="size-3.5 text-teal-500" />;
     case "deleted": // soft-deleted by the user
       return <CircleSlashIcon className="size-3.5 text-muted-foreground" />;
   }

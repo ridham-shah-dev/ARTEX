@@ -29,7 +29,7 @@ import type { Activity, InterceptPending } from "@/lib/types";
 // ---- per-agent lane color (planner + work#1/#2/#3 …) ---------------------------
 const workerColors = [
   "bg-sky-600",
-  "bg-violet-600",
+  "bg-teal-600",
   "bg-teal-600",
   "bg-pink-600",
   "bg-orange-600",

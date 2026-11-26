@@ -51,7 +51,7 @@ const PAGE_SIZES = [25, 50, 100, 200];
 const METHOD_COLOR: Record<string, string> = {
   DELETE: "bg-red-100 text-red-700",
   GET: "bg-emerald-100 text-emerald-700",
-  HEAD: "bg-purple-100 text-purple-700",
+  HEAD: "bg-teal-100 text-teal-700",
   OPTIONS: "bg-slate-100 text-slate-600",
   PATCH: "bg-orange-100 text-orange-700",
   POST: "bg-blue-100 text-blue-700",

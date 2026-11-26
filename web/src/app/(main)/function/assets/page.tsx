@@ -72,7 +72,7 @@ const METHOD_COLOR: Record<string, string> = {
   PUT: "bg-amber-100 text-amber-700",
   PATCH: "bg-orange-100 text-orange-700",
   DELETE: "bg-red-100 text-red-700",
-  HEAD: "bg-purple-100 text-purple-700",
+  HEAD: "bg-teal-100 text-teal-700",
   OPTIONS: "bg-slate-100 text-slate-600",
 };
 

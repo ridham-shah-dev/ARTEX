@@ -5,19 +5,18 @@
 /* Theme preset styles: these override CSS variables based on the selected data-theme-preset */
 @import "../styles/presets/brutalist.css";
 @import "../styles/presets/neon.css";
-@import "../styles/presets/soft-pop.css";
 @import "../styles/presets/tangerine.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -49,83 +48,90 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-mono);
   --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-lime: var(--lime);
+  --color-lime-foreground: var(--lime-foreground);
 }
 
-/* Default theme styles (used when no data-theme-preset is set or when 'default' is selected).
-These serve as the fallback; there is no separate default.css file. */
+/* ARTEX theme: charcoal surfaces, electric cyan (primary) + lime (accent), square corners.
+Light mode is the daylight variant of the same palette; dark is the primary look. */
 :root {
-  --radius: 0.625rem;
+  --radius: 0px;
+  --background: oklch(0.975 0.004 230);
+  --foreground: oklch(0.2 0.012 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.2 0.012 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.2 0.012 250);
+  --primary: oklch(0.52 0.12 215);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.006 230);
+  --secondary-foreground: oklch(0.25 0.012 250);
+  --muted: oklch(0.94 0.006 230);
+  --muted-foreground: oklch(0.45 0.015 250);
+  --accent: oklch(0.9 0.19 128);
+  --accent-foreground: oklch(0.22 0.04 128);
+  --lime: oklch(0.9 0.19 128);
+  --lime-foreground: oklch(0.22 0.04 128);
+  --destructive: oklch(0.55 0.22 22);
+  --border: oklch(0.86 0.008 240);
+  --input: oklch(0.8 0.01 240);
+  --ring: oklch(0.6 0.13 210);
+  --chart-1: oklch(0.55 0.12 215);
+  --chart-2: oklch(0.7 0.19 128);
+  --chart-3: oklch(0.72 0.15 75);
+  --chart-4: oklch(0.62 0.19 30);
+  --chart-5: oklch(0.55 0.13 250);
+  --sidebar: oklch(0.955 0.005 230);
+  --sidebar-foreground: oklch(0.2 0.012 250);
+  --sidebar-primary: oklch(0.52 0.12 215);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.9 0.19 128);
+  --sidebar-accent-foreground: oklch(0.22 0.04 128);
+  --sidebar-border: oklch(0.86 0.008 240);
+  --sidebar-ring: oklch(0.6 0.13 210);
 
   /* fonts */
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-geist-mono);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(0.185 0.006 250);
+  --foreground: oklch(0.955 0.005 230);
+  --card: oklch(0.225 0.007 250);
+  --card-foreground: oklch(0.955 0.005 230);
+  --popover: oklch(0.225 0.007 250);
+  --popover-foreground: oklch(0.955 0.005 230);
+  --primary: oklch(0.85 0.14 200);
+  --primary-foreground: oklch(0.17 0.02 220);
+  --secondary: oklch(0.27 0.008 250);
+  --secondary-foreground: oklch(0.955 0.005 230);
+  --muted: oklch(0.27 0.008 250);
+  --muted-foreground: oklch(0.72 0.012 240);
+  --accent: oklch(0.89 0.21 128);
+  --accent-foreground: oklch(0.2 0.04 128);
+  --lime: oklch(0.89 0.21 128);
+  --lime-foreground: oklch(0.2 0.04 128);
+  --destructive: oklch(0.68 0.22 22);
+  --border: oklch(0.34 0.01 250);
+  --input: oklch(0.38 0.012 250);
+  --ring: oklch(0.85 0.14 200);
+  --chart-1: oklch(0.85 0.14 200);
+  --chart-2: oklch(0.89 0.21 128);
+  --chart-3: oklch(0.82 0.16 80);
+  --chart-4: oklch(0.7 0.2 28);
+  --chart-5: oklch(0.7 0.14 245);
+  --sidebar: oklch(0.155 0.006 250);
+  --sidebar-foreground: oklch(0.955 0.005 230);
+  --sidebar-primary: oklch(0.85 0.14 200);
+  --sidebar-primary-foreground: oklch(0.17 0.02 220);
+  --sidebar-accent: oklch(0.27 0.008 250);
+  --sidebar-accent-foreground: oklch(0.89 0.21 128);
+  --sidebar-border: oklch(0.3 0.01 250);
+  --sidebar-ring: oklch(0.85 0.14 200);
 }
 
 @layer base {
@@ -139,6 +145,37 @@ These serve as the fallback; there is no separate default.css file. */
   }
   html {
     @apply font-sans;
+  }
+
+  /* Monospace voice for headings, table heads and labels. */
+  h1,
+  h2,
+  h3,
+  h4,
+  [data-slot="card-title"],
+  [data-slot="sidebar-group-label"] {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    letter-spacing: -0.01em;
+  }
+
+  th,
+  [data-slot="table-head"],
+  [data-slot="badge"] {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.7rem;
+  }
+
+  ::selection {
+    background: var(--lime);
+    color: var(--lime-foreground);
+  }
+
+  /* Hard-edged look: no soft shadows, 2px cyan focus outline instead of glow rings. */
+  *:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 1px;
   }
 }
 
@@ -210,6 +247,9 @@ These serve as the fallback; there is no separate default.css file. */
   }
   html[data-font="geistPixelSquare"] body {
     --font-sans: var(--font-geist-pixel-square);
+  }
+  html[data-font="spaceGrotesk"] body {
+    --font-sans: var(--font-space-grotesk);
   }
   html[data-font="jetBrainsMono"] body {
     --font-sans: var(--font-jetbrains-mono);

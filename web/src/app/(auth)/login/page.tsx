@@ -102,7 +102,7 @@ export default function LoginPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <picture className="contents">
             <source srcSet="/logo.webp" type="image/webp" />
-            <img src="/logo.png" alt="ARTEX" width={160} height={160} className="relative brightness-0 invert" />
+            <img src="/logo.png" alt="ARTEX" width={160} height={160} className="relative" />
           </picture>
         </div>
       </div>

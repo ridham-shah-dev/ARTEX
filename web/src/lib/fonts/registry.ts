@@ -1,5 +1,6 @@
-// TEMPORARY: offline build fallback — uses local Geist fonts instead of Google Fonts.
-// Restore registry.ts.bak after build.
+// ARTEX UI fonts (Space Grotesk + JetBrains Mono) load via next/font/google.
+// The remaining options are an offline fallback that reuses the local Geist files.
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import { GeistPixelSquare } from "geist/font/pixel";
 
@@ -19,9 +20,11 @@ const merriweather = localFont({ src: "../../../node_modules/geist/dist/fonts/ge
 const lora = localFont({ src: "../../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2", variable: "--font-lora" });
 const playfairDisplay = localFont({ src: "../../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2", variable: "--font-playfair-display" });
 const geistMono = localFont({ src: "../../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2", variable: "--font-geist-mono" });
-const jetBrainsMono = localFont({ src: "../../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2", variable: "--font-jetbrains-mono" });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 
 export const fontRegistry = {
+  spaceGrotesk: { label: "Space Grotesk", font: spaceGrotesk },
   geist: { label: "Geist", font: geist },
   inter: { label: "Inter", font: inter },
   notoSans: { label: "Noto Sans", font: notoSans },

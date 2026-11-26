@@ -40,11 +40,11 @@ type KindMeta = { label: string; icon: LucideIcon; iconBg: string; hex: string; 
 
 const kindMeta: Record<Kind, KindMeta> = {
   company: { label: t("Company"), icon: Building2, iconBg: "bg-slate-500", hex: "#64748b", size: 46 },
-  root_domain: { label: t("Root domain"), icon: Globe, iconBg: "bg-indigo-500", hex: "#6366f1", size: 38 },
+  root_domain: { label: t("Root domain"), icon: Globe, iconBg: "bg-blue-500", hex: "#3b82f6", size: 38 },
   subdomain: { label: t("Subdomain"), icon: Waypoints, iconBg: "bg-blue-500", hex: "#3b82f6", size: 30 },
   ip: { label: "IP", icon: Server, iconBg: "bg-cyan-600", hex: "#0891b2", size: 28 },
   service: { label: t("Service"), icon: Radio, iconBg: "bg-amber-500", hex: "#f59e0b", size: 26 },
-  app: { label: t("App"), icon: AppWindow, iconBg: "bg-fuchsia-500", hex: "#d946ef", size: 26 },
+  app: { label: t("App"), icon: AppWindow, iconBg: "bg-orange-500", hex: "#f97316", size: 26 },
   endpoint: { label: t("Endpoint"), icon: Link2, iconBg: "bg-rose-500", hex: "#f43f5e", size: 20 },
 };
 
